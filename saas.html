@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap Dropdown Menu</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    /* ----------------------------------TOGGLE BTN STARTS HERE-------------------------------------- */
+    body.light-mode {
+      background-color: white;
+      color: black;
+    }
+
+    body.dark-mode {
+      background-color: black;
+      color: white;
+    }
+
+    a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+    body.light-mode a {
+    color: black;
+   
+}
+body.dark-mode a {
+color: white;
+}
+
+
+
+a.nav-link{
+  color: inherit;
+}
+body.light-mode a.nav-link {
+    color: black;
+   
+}
+body.dark-mode a.nav-link {
+color: black;
+}
+button {
+    color: inherit; 
+ 
+  transition: color 0.3s; 
+}
+body.light-mode button {
+     
+      color: black; 
+    }
+
+    
+    body.dark-mode button {
+     
+      color: white; 
+    }
+    .dropdown {
+  color: white; 
+  transition: color 0.3s; 
+}
+
+    
+    .toggle-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      margin-top: -62px;
+    }
+
+    /* Styling for the toggle button */
+    .toggle-btn {
+      width: 80px;
+      height: 20px;
+      background-color: blue;
+      border-radius: 15px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      position: relative;
+      padding: 2px;
+      transition: 0.3s;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Styling for the toggle button text */
+    .toggle-text {
+      width: 85%;
+      text-align: center;
+      
+      margin: 0;
+      
+    }
+
+    /* Styling for the light mode button */
+    .light-mode .toggle-btn {
+      justify-content: flex-start;
+    }
+
+    /* Styling for the dark mode button */
+    .dark-mode .toggle-btn {
+      justify-content: flex-end;
+    }
+
+    /* Styling for the active toggle button */
+    .toggle-btn.active {
+      background-color: #007bff;
+    }
+
+    /* Styling for the circle */
+    .circle {
+      width: 15px;
+      height: 15px;
+      background-color: white;
+      border-radius: 50%;
+      position: absolute;
+      transition: 0.3s;
+    }
+
+    /* Styling for circle in dark mode */
+    .dark-mode .circle {
+      background-color: black;
+      right: 2px;
+    }
+.custom-btn:hover{
+    color: blue;
+}
+
+     /* ----------------------------------TOGGLE BTN STOPS HERE-------------------------------------- */
+     .carousel-indicators li{
+      background-color: grey;
+     }
+     .carousel-indicators .active{
+      background-color: blue;
+     }
+     .box_social_link{
+      margin-right: 20px;
+      margin-top: 50px;
+     }
+     .box_social_link:hover{
+      position: relative;
+      bottom: 10px;
+     }
+   input:focus{
+    outline: none;
+    border-color: none;
+   }
+   #col{
+    color: white;
+   }
+   #col:hover{
+background-color: transparent;
+color: blue;
+   }
+   #cola{
+    color: white;
+   }
+   #cola:hover{
+background-color: transparent;
+
+   }
+  </style>
+</head>
+<body>
+    <nav>
+    <div style="display: flex; margin-top: -20px;">
+    <div style="display: flex; margin-top: 40px;">
+        <img src="https://silicon.createx.studio/assets/img/logo.svg" style="height: 50px; margin-right: 9px; margin-left: 45px;">
+        <p style="margin-top: 10px;"><a><strong style="font-size: 1.5em; font-family: Arial, Helvetica, sans-serif; margin-top: 105px;margin-right: 50px;">Silicon</strong></a></p>
+    </div>
+   
+   <!---Template Intro Page
+    Mobile App Showcase v.1
+    Mobile App Showcase v.2
+    Product Landing
+    Startup
+    SaaS v.1
+    SaaS v.2
+    SaaS v.3
+    SaaS v.4New
+    Financial Consulting
+    Online Courses
+    Medical
+    Software Dev Agency v.1
+    Software Dev Agency v.2New
+    Software Dev Agency v.3New
+    Conference
+    Digital Agency
+    Blog Homepage-->
+
+
+
+
+
+
+  
+  <div class="container mt-5" style="margin-left:-50px;">
+    <div class="dropdown">
+      <button class="btn dropdown-toggle custom-btn" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Landing
+      </button>
+      <div class="dropdown-menu bg-dark custom-width" aria-labelledby="dropdownMenuButton" style="width: 800px;">
+        <div style="display: flex;">
+        <div>
+        <img src="https://silicon.createx.studio/assets/img/landings.jpg"  style="height: 280px; margin-right: 50px;">
+      </div>
+      <div>
+        <div class="row">
+          <a class="dropdown-item col " href="#" id="col">Template Intro Page</a>
+          <a class="dropdown-item col " href="#" id="col">Financial Consulting</a>
+        
+        </div>
+        <div class="row">
+          <a class="dropdown-item col " href="#" id="col"> Mobile App Showcase v.1</a>
+          <a class="dropdown-item col " href="#" id="col">Online Courses</a>
+         
+        </div>
+        <div class="row">
+          <a class="dropdown-item col " href="#" id="col">Mobile App Showcase v.2</a>
+          <a class="dropdown-item col " href="#" id="col">Medical</a>
+          
+        </div>
+        <div class="row">
+          <a class="dropdown-item col " href="#" id="col">Product Landing</a>
+          <a class="dropdown-item col " href="#" id="col">Software Dev Agency v.1</a>
+         
+        </div>
+        <div class="row">
+          <a class="dropdown-item col " href="#" id="col">Startup</a>
+          <a class="dropdown-item col t" href="#" id="col" style="margin-left: 150px;">Software Dev Agency v.2New</a>
+       
+        </div>
+        <div class="row">
+          <a class="dropdown-item col " href="#" id="col">SaaS v.1</a>
+          <a class="dropdown-item col " href="#" id="col">Software Dev Agency v.3New</a>
+          
+        </div>
+        <div class="row">
+          <a class="dropdown-item col " href="#" id="col">SaaS v.2</a>
+          <a class="dropdown-item col " href="#" id="col">Conference</a>
+          
+        </div>
+        <div class="row">
+          <a class="dropdown-item col " href="#" id="col">SaaS v.3</a>
+          <a class="dropdown-item col " href="#" id="col">Digital Agency</a>
+       
+        </div>
+        <div class="row">
+          <a class="dropdown-item col " href="#" id="col">SaaS v.4New</a>
+          <a class="dropdown-item col " href="#" id="col">Blog Homepage</a>
+        
+        </div>
+      </div>
+    </div>
+      </div>
+    </div>
+  </div>
+
+  
+
+<!--About
+About v.1
+About v.2
+About v.3
+Blog
+List View with Sidebar
+Grid View with Sidebar
+List View no Sidebar
+Grid View no Sidebar
+Simple Feed
+Single Post
+Podcast
+Portfolio
+Grid View
+List View
+Slider View
+Courses
+Single Project
+Single Course
+Services
+Services v.1
+Services v.2
+Service Details v.1
+Service Details v.2
+Pricing
+Pricing Page
+Contacts
+Contacts v.1
+Contacts v.2
+Contacts v.3
+Specialty
+404 Error v.1
+404 Error v.2-->
+
+  <div class="container mt-5" style="margin-left:-380px;">
+    <div class="dropdown">
+      <button class="btn dropdown-toggle custom-btn" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Pages
+      </button>
+      <div class="dropdown-menu bg-dark custom-width" aria-labelledby="dropdownMenuButton" style="width: 700px;">
+        <div class="row">
+          <p class="dropdown-item col " href="#" id="cola"><b>About</b></p>
+          <p class="dropdown-item col " href="#" id="cola"><b>Portfolio</b></p>
+          <p class="dropdown-item col " href="#" id="cola"><b>Pricing</b></p>
+        </div>
+        <div class="row">
+          <a class="dropdown-item col " href="#" id="col">About v.1</a>
+          <a class="dropdown-item col " href="#" id="col">Grid View</a>
+          <a class="dropdown-item col " href="#" id="col">Pricing Page</a>
+        </div>
+        <div class="row">
+          <a class="dropdown-item col " href="#" id="col">About v.2</a>
+          <a class="dropdown-item col " href="#" id="col">List View</a>
+          <a class="dropdown-item col " id="col"></a>
+        </div>
+        <div class="row">
+          <a class="dropdown-item col " href="#" id="col">About v.3</a>
+          <a class="dropdown-item col" href="#" id="col">Slider View</a>
+          <p class="dropdown-item col " href="#" id="cola"><b>Contacts</b></p>
+        </div>
+        <div class="row">
+          <a class="dropdown-item col "  id="col"></a>
+          <a class="dropdown-item col " href="#" id="col">Courses</a>
+          <a class="dropdown-item col " href="#" id="col">Contacts v.1</a>
+        </div>
+        <div class="row">
+          <p class="dropdown-item col " href="#" id="cola"><b>Blog</b></p>
+          <a class="dropdown-item col " href="#" id="col">Single Project</a>
+          <a class="dropdown-item col " href="#" id="col">Contacts v.2</a>
+        </div>
+        <div class="row">
+          <a class="dropdown-item col " href="#" id="col">List View with Sidebar</a>
+          <a class="dropdown-item col" href="#" id="col">Single Course</a>
+          <a class="dropdown-item col " href="#" id="col">Contacts v.3</a>
+        </div>
+        <div class="row">
+          <a class="dropdown-item col " href="#" id="col">Grid View with Sidebar</a>
+          <a class="dropdown-item col "  id="col"></a>
+          <a class="dropdown-item col " id="col"></a>
+        </div>
+        <div class="row">
+          <a class="dropdown-item col " href="#" id="col">List View no Sidebar</a>
+          <p class="dropdown-item col " href="#" id="cola"><b>Services</b></p>
+          <p class="dropdown-item col " href="#" id="cola"><b>Specialty</b></p>
+        </div>
+        <div class="row">
+          <a class="dropdown-item col " href="#" id="col">Grid View no Sidebar</a>
+          <a class="dropdown-item col" href="#" id="col">Services v.1</a>
+          <a class="dropdown-item col " href="#" id="col">404 Error v.1</a>
+        </div>
+        <div class="row">
+          <a class="dropdown-item col " href="#" id="col">Simple Feed</a>
+          <a class="dropdown-item col " href="#" id="col">Services v.2</a>
+          <a class="dropdown-item col " href="#" id="col">404 Error v.2</a>
+        </div>
+        <div class="row">
+          <a class="dropdown-item col " href="#" id="col">Single Post</a>
+          <a class="dropdown-item col " href="#" id="col">Service Details v.1</a>
+          <a class="dropdown-item col "  id="col"></a>
+        </div>
+        <div class="row">
+          <a class="dropdown-item col " href="#" id="col">Podcast</a>
+          <a class="dropdown-item col " href="#" id="col">Service Details v.2</a>
+          <a class="dropdown-item col " id="col"></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+<!--Account Details
+Security
+Notifications
+Messages
+Saved Items
+My Collections
+Payment Details
+Sign In
+Sign Up-->
+
+
+      <div class="dropdown" style="left:-380px; bottom: -48px">
+        <button class="btn dropdown-toggle custom-btn" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Account
+        </button>
+        <div class="dropdown-menu text-light bg-dark" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item " href="#" id="col">Account Details</a>
+          <a class="dropdown-item" href="#" id="col">Security</a>
+          <a class="dropdown-item " href="#" id="col">Notifications</a>
+          <a class="dropdown-item " href="#" id="col">Messages</a>
+          <a class="dropdown-item " href="#" id="col">Saved Items</a>
+          <a class="dropdown-item " href="#" id="col">My Collections</a>
+          <a class="dropdown-item " href="#" id="col">Payment Details</a>
+          <a class="dropdown-item " href="#" id="col">Sign In</a>
+          <a class="dropdown-item " href="#" id="col">Sign Up</a>
+        </div>
+      </div>
+
+
+
+
+
+<!--------------------------------------TOGGLE BTN STARTS HERE------------------------->
+<div class="toggle-container" style="bottom: -46px; position: relative; right:-50px;">
+    <div class="toggle-text">Light</div>
+    <div class="toggle-btn" onclick="toggleMode(this)">
+      <div class="circle"></div>
+    </div>
+    <div class="toggle-text">Dark</div>
+  </div>
+  <!--------------------------------------TOGGLE BTN STOPS HERE------------------------->
+
+
+
+
+  <a href="" class style=" position: relative; left: -560px; margin-right: 5px; bottom: -54px;">UI_Kits</a>
+  <a href="" style=" position: relative; left: -535px; margin-right: 5px; bottom: -54px;">Docs</a>
+
+
+  <button type="button" class="btn btn-primary w-25 h-25" style="left: -50px; position: relative; bottom: -45px; color: white;"><i class="fa fa-cart-shopping" style="margin-right: 7px;"></i>Buy now</button>
+    </div>
+</nav>
+<!--------------------------------------------------------->
+<h1 style="font-size: 4em; margin-top: 100px; margin-left: 70px; position: relative;" >Task <br>Management <br>Assistant You<br> Gonna Love</h1>
+<p style="font-size: 1.2em; margin-top: 50px; margin-left: 70px; position: relative;">We offer you a new generation of task management<br> system. Plan, manage & track all your tasks in one flexible<br> tool.</p>
+<button type="button" class="btn btn-primary custom-width custom-height" style="width: 210px; height: 50px; border-radius: 8px;  margin-top: 30px; margin-left: 70px; position: relative;">Get started for free</button>
+<p style="font-size: 1.2em; margin-top: 100px; margin-left: 70px; position: relative;"><b>Largest companies use our tool to work efficiently</b></p>
+<div style="margin-top: 40px; margin-left: 53px;">
+    <img src="https://silicon.createx.studio/assets/img/brands/07.svg" style="height: 30px;">
+    <img src="https://silicon.createx.studio/assets/img/brands/04.svg" style="height: 30px;">
+    <img src="https://silicon.createx.studio/assets/img/brands/02.svg" style="height: 30px;">
+    <img src="https://silicon.createx.studio/assets/img/brands/05.svg" style="height: 30px;">
+</div>
+<h1 style="font-size: 2.5em; margin-top: 100px; position: relative; text-align: center;" ><strong>Stay Organized & Connected</strong></h1>
+<!--------------------------------------------------------->
+<div style="display: flex; margin-top: 100px;"><!---FLEX 1 STARTS-->
+<!-----------------------------------------DIV FOR IMG START HERE1--------------------------------------------------------->
+<div style="text-align: center; justify-content: center; align-items: center;">
+    <img src="https://silicon.createx.studio/assets/img/landing/saas-1/features/chat.svg" style="height: 40px;">
+    <div style=" background-color: rgb(227, 227, 227); width:70px; height: 70px; border-radius: 50px; margin-top: -53px;right:-122.5px; position: relative; z-index: -1;"></div>
+    <p style="font-size:1.5em; margin-bottom: 5px;"><strong>Task Comments</strong></p>
+    <p style="text-align: center;">Id mollis consectetur congue egestas egestas<br>suspendisse blandit justo.</p>
+</div>
+<!------------------------------------------DIV FOR IMAGE STOP HERE-------------------------------------------------------->
+<!-----------------------------------------DIV FOR IMG START HERE2--------------------------------------------------------->
+<div style="text-align: center; justify-content: center; align-items: center;">
+    <img src="https://silicon.createx.studio/assets/img/landing/saas-1/features/analytics.svg" style="height: 40px;">
+    <div style=" background-color: rgb(227, 227, 227); width:70px; height: 70px; border-radius: 50px; margin-top: -53px;right:-122.5px; position: relative; z-index: -1;"></div>
+    <p style="font-size:1.5em; margin-bottom: 5px;"><strong>Tasks Analytics</strong></p>
+    <p style="text-align: center;">Id mollis consectetur congue egestas egestas<br>suspendisse blandit justo.</p>
+</div>
+<!------------------------------------------DIV FOR IMAGE STOP HERE-------------------------------------------------------->
+<!-----------------------------------------DIV FOR IMG START HERE3--------------------------------------------------------->
+<div style="text-align: center; justify-content: center; align-items: center;">
+    <img src="https://silicon.createx.studio/assets/img/landing/saas-1/features/bell.svg" style="height: 40px;">
+    <div style=" background-color: rgb(227, 227, 227); width:70px; height: 70px; border-radius: 50px; margin-top: -53px;right:-122.5px; position: relative; z-index: -1;"></div>
+    <p style="font-size:1.5em; margin-bottom: 5px;"><strong>Notifications</strong></p>
+    <p style="text-align: center;">Id mollis consectetur congue egestas egestas<br>suspendisse blandit justo.</p>
+</div>
+<!------------------------------------------DIV FOR IMAGE STOP HERE-------------------------------------------------------->
+<!-----------------------------------------DIV FOR IMG START HERE4--------------------------------------------------------->
+<div style="text-align: center; justify-content: center; align-items: center;">
+    <img src="https://silicon.createx.studio/assets/img/landing/saas-1/features/tasks.svg" style="height: 40px;">
+    <div style=" background-color: rgb(227, 227, 227); width:70px; height: 70px; border-radius: 50px; margin-top: -53px;right:-122.5px; position: relative; z-index: -1;"></div>
+    <p style="font-size:1.5em; margin-bottom: 5px;"><strong>Sections & Subtasks</strong></p>
+    <p style="text-align: center;">Id mollis consectetur congue egestas egestas<br>suspendisse blandit justo.</p>
+</div>
+<!------------------------------------------DIV FOR IMAGE STOP HERE-------------------------------------------------------->
+</div><!---FLEX 1 ends-->
+<div style="display: flex; margin-top: 100px;"><!---FLEX 2 STARTS-->
+<!-----------------------------------------DIV FOR IMG START HERE5--------------------------------------------------------->
+<div style="text-align: center; justify-content: center; align-items: center;">
+    <img src="https://silicon.createx.studio/assets/img/landing/saas-1/features/calendar.svg" style="height: 40px;">
+    <div style=" background-color: rgb(227, 227, 227); width:70px; height: 70px; border-radius: 50px; margin-top: -53px;right:-122.5px; position: relative; z-index: -1;"></div>
+    <p style="font-size:1.5em; margin-bottom: 5px;"><strong>Progress Tracking</strong></p>
+    <p style="text-align: center;">Id mollis consectetur congue egestas egestas<br>suspendisse blandit justo.</p>
+</div>
+<!------------------------------------------DIV FOR IMAGE STOP HERE-------------------------------------------------------->
+<!-----------------------------------------DIV FOR IMG START HERE6--------------------------------------------------------->
+<div style="text-align: center; justify-content: center; align-items: center;">
+    <img src="https://silicon.createx.studio/assets/img/landing/saas-1/features/add-group.svg" style="height: 40px;">
+    <div style=" background-color: rgb(227, 227, 227); width:70px; height: 70px; border-radius: 50px; margin-top: -53px;right:-122.5px; position: relative; z-index: -1;"></div>
+    <p style="font-size:1.5em; margin-bottom: 5px;"><strong>Multiple Assignees</strong></p>
+    <p style="text-align: center;">Id mollis consectetur congue egestas egestas<br>suspendisse blandit justo.</p>
+</div>
+<!------------------------------------------DIV FOR IMAGE STOP HERE-------------------------------------------------------->
+<!-----------------------------------------DIV FOR IMG START HERE7--------------------------------------------------------->
+<div style="text-align: center; justify-content: center; align-items: center;">
+    <img src="https://silicon.createx.studio/assets/img/landing/saas-1/features/headset.svg" style="height: 40px;">
+    <div style=" background-color: rgb(227, 227, 227); width:70px; height: 70px; border-radius: 50px; margin-top: -53px;right:-122.5px; position: relative; z-index: -1;"></div>
+    <p style="font-size:1.5em; margin-bottom: 5px;"><strong>Support 24/7</strong></p>
+    <p style="text-align: center;">Id mollis consectetur congue egestas egestas<br>suspendisse blandit justo.</p>
+</div>
+<!------------------------------------------DIV FOR IMAGE STOP HERE-------------------------------------------------------->
+<!-----------------------------------------DIV FOR IMG START HERE8--------------------------------------------------------->
+<div style="text-align: center; justify-content: center; align-items: center;">
+    <img src="https://silicon.createx.studio/assets/img/landing/saas-1/features/shield.svg" style="height: 40px;">
+    <div style=" background-color: rgb(227, 227, 227); width:70px; height: 70px; border-radius: 50px; margin-top: -53px;right:-122.5px; position: relative; z-index: -1;"></div>
+    <p style="font-size:1.5em; margin-bottom: 5px;"><strong>Data Security</strong></p>
+    <p style="text-align: center;">Id mollis consectetur congue egestas egestas<br>suspendisse blandit justo.</p>
+</div>
+<!------------------------------------------DIV FOR IMAGE STOP HERE-------------------------------------------------------->
+</div><!---FLEX 2 ends-->
+                              <!----------------------------------------------------------------->
+                              <div style="display: flex;">
+                              <img src="https://silicon.createx.studio/assets/img/landing/saas-1/dashboard.png" style="height: 500px;margin-top: 100px;">
+                              <div style=" position: relative; margin-left: 60px;">
+                              <h1 style="font-size: 2.5em; margin-top: 140px;margin-bottom: 40px;margin-left: 20px;" ><strong>Manage Your Work</strong></h1>
+                              <ol style="font-size: large; list-style: none;">
+                                <li><i class='fa fa-check-circle text-primary mr-3'></i>Powerful project management</li><br>
+                                <li><i class='fa fa-check-circle text-primary mr-3'></i>Transparent work management</li><br>
+                                <li><i class='fa fa-check-circle text-primary mr-3'></i>Manage work & focus on the most important<br> <span style="position: relative; left: 35px;">tasks</span></li><br>
+                                <li><i class='fa fa-check-circle text-primary mr-3'></i>Track your progress with interactive charts</li><br>
+                                <li><i class='fa fa-check-circle text-primary mr-3'></i>Easiest way to track time spent on tasks</li><br>
+                              </ol>
+                              <button type="button" class="btn btn-primary custom-width custom-height" style="width: 170px; height: 45px; margin-left: 20px;">See more<i class="fa fa-arrow-right ml-3"></i></button>
+                            </div>
+                          </div>
+                  
+       <!----- <iframe src="nested.html" width="90%" height="600" style="border:none; margin-left: 70px;"></iframe>-->
+       <h1 style="font-size: 2.4em; margin-top: 100px; position: relative; text-align: center;" ><strong>One Tool — Endless Use Cases</strong></h1>
+<!---------------------------DIV FOR SECOND NAV STARTS------------------------------->
+        <ul class="nav nav-pills mb-3 d-flex justify-content-center mb-5" id="pills-tab" role="tablist">
+          <li class="nav-item mr-2" style="background-color:  rgb(240, 248, 252); border-radius: 7px;">
+            <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true"><b>Project Management</b></a>
+          </li>
+          <li class="nav-item custom-width custom-background mr-1" style="background-color:  rgb(240, 248, 252); border-radius: 7px;">
+            <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false"><b>Remote Work</b></a>
+          </li>
+          <li class="nav-item custom-width ml-1" style="background-color:  rgb(240, 248, 252); border-radius: 7px;">
+            <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false"><b>Product Release</b></a>
+          </li>
+          <li class="nav-item custom-width ml-2" style="background-color:  rgb(240, 248, 252); border-radius: 7px;">
+            <a class="nav-link" id="pills-radar-tab" data-toggle="pill" href="#pills-radar" role="tab" aria-controls="pills-radar" aria-selected="false"><b>Campaign Planning</b></a>
+          </li>
+        </ul>
+        <div class="tab-content" id="pills-tabContent">
+          <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+            <!----------------------------------------------------------------->
+<div style="display: flex; background-color: rgb(240, 248, 252); height: 450px; width: 1100px; margin-left: 90px;">
+<div style="margin-left: 50px; position: relative; right:-30px;">
+  <h1 style="font-size: 2.5em; color: black; margin-top: 100px; position: relative;" ><strong>Project management</strong></h1>
+  <p style="margin-top: 20px; color: black;">Vestibulum nunc lectus auctor quis. Natoque <br>lectus tortor lacus, eu. Nunc feugiat nisl maecenas <br>nulla hac morbi. Vitae, donec facilisis sed nunc <br>netus. Venenatis posuere faucibus enim est. Vel <br>dignissim morbi blandit morbi tellus. Arcu <br>ullamcorper quis enim.</p>
+  </div>
+<img src="https://silicon.createx.studio/assets/img/landing/saas-1/use-cases/01.png" style="height: 300px; margin-left: 120px;position: relative;left: -40px; bottom: -80px;">
+</div>
+<!----------------------------------------------------------------->
+          </div>
+          <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+             <!----------------------------------------------------------------->
+<div style="display: flex; background-color: rgb(240, 248, 252); height: 450px; width: 1100px; margin-left: 90px;">
+  <div style="margin-left: 50px; position: relative; right:-30px;">
+    <h1 style="font-size: 2.5em; color: black; margin-top: 100px; position: relative;" ><strong>Remote Work</strong></h1>
+    <p style="margin-top: 20px;color: black;">Vestibulum nunc lectus auctor quis. Natoque <br>lectus tortor lacus, eu. Nunc feugiat nisl maecenas <br>nulla hac morbi. Vitae, donec facilisis sed nunc <br>netus. Venenatis posuere faucibus enim est. Vel <br>dignissim morbi blandit morbi tellus. Arcu <br>ullamcorper quis enim.</p>
+    </div>
+  <img src="https://silicon.createx.studio/assets/img/landing/saas-1/use-cases/02.png" style="height: 400px; margin-left: 120px;position: relative;left: -40px; bottom: -40px;">
+  </div>
+  <!----------------------------------------------------------------->
+          </div>
+          <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+     <!----------------------------------------------------------------->
+     <div style="display: flex; background-color: rgb(240, 248, 252); height: 450px; width: 1100px; margin-left: 90px;">
+      <div style="margin-left: 50px; position: relative; right:-30px;">
+        <h1 style="font-size: 2.5em; color: black; margin-top: 100px; position: relative;" ><strong>Product Release</strong></h1>
+        <p style="margin-top: 20px;color: black;">Vestibulum nunc lectus auctor quis. Natoque <br>lectus tortor lacus, eu. Nunc feugiat nisl maecenas <br>nulla hac morbi. Vitae, donec facilisis sed nunc <br>netus. Venenatis posuere faucibus enim est. Vel <br>dignissim morbi blandit morbi tellus. Arcu <br>ullamcorper quis enim.</p>
+        </div>
+      <img src="https://silicon.createx.studio/assets/img/landing/saas-1/use-cases/03.png" style="height: 400px; margin-left: 120px;position: relative;left: -40px; bottom: -40px;">
+      </div>
+      <!----------------------------------------------------------------->
+          </div>
+          <div class="tab-pane fade" id="pills-radar" role="tabpanel" aria-labelledby="pills-radar-tab">
+             <!----------------------------------------------------------------->
+     <div style="display: flex; background-color: rgb(240, 248, 252); height: 450px; width: 1100px; margin-left: 90px;">
+      <div style="margin-left: 50px; position: relative; right:-30px;">
+        <h1 style="font-size: 2.5em; color: black; margin-top: 100px; position: relative;" ><strong>Campaign Planning</strong></h1>
+        <p style="margin-top: 20px; color: black;">Vestibulum nunc lectus auctor quis. Natoque <br>lectus tortor lacus, eu. Nunc feugiat nisl maecenas <br>nulla hac morbi. Vitae, donec facilisis sed nunc <br>netus. Venenatis posuere faucibus enim est. Vel <br>dignissim morbi blandit morbi tellus. Arcu <br>ullamcorper quis enim.</p>
+        </div>
+      <img src="https://silicon.createx.studio/assets/img/landing/saas-1/use-cases/04.png" style="height: 400px; margin-left: 120px;position: relative;left: -40px; bottom: -40px;">
+      </div>
+      <!----------------------------------------------------------------->
+          </div>
+        </div>
+
+
+<!----------------------------------SECOND NAV ENDS------------------------------------------------------------>
+
+
+
+
+
+
+<!-----------------------------------------BLACK BOX AND CAROUSEL STARTS HERE------------------------------>
+<div style="display: flex; background-color:rgb(240, 248, 252); height: 450px; margin-top: 100px;">
+<!----------------------------------------BLACK BOX STARTS HERE-------------------------------->
+<div style="color: white; background-color: black; width: 600px; margin-left: 30px; height: 350px; bottom: -50px; position: relative; border-radius: 10px;">
+  <h1 style="font-size: 6em; margin-left: 45px; padding-top: 20px;"><strong>420k</strong></h1>
+  <p style="font-size: 1.7em; margin-left: 45px; padding-bottom: 20px;">users are taking advantage of our <strong>Task<br> Manager Tool.</strong> It’s a new transparent and <br>efficient way to organize all of your daily<br> tasks.</p>
+</div>
+<!----------------------------------------BLACK BOX STOPS HERE-------------------------------->
+<!------------------------------------------CAROUSEL STARTS HERE------------------------------->
+
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="false">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active" style="left: 20px; position: relative; top: -30px;"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1" style="left: 20px; position: relative;top: -30px;"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2" style="left: 20px; position: relative; top: -30px;"></li>
+  </ol>
+  <div class="carousel-inner" style="height: 350px; background-color: white; width: 600px; margin-left:20px;  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2); color: black; position: relative; bottom: -50px; border-radius: 10px;">
+    <div class="carousel-item active">
+      <div class="d-block w-50" style="left: 30px;position: relative;bottom: -110px;">
+        <p style="font-size: 1.2em; width: 4000px; position: relative; bottom: 40px;">
+          Mi semper risus ultricies orci pulvinar in at enim orci. Quis<br>facilisis nunc pellentesque in ullamcorper sit. Lorem blandit arcu <br>sapien, senectus libero, amet dapibus cursus quam. Eget <br>pellentesque eu purus volutpat adipiscing malesuada.</p>
+          <div style="display: flex;">
+        <img src="https://silicon.createx.studio/assets/img/avatar/14.jpg" style="border-radius: 500px; height: 60px; width: 60px;">
+        <span style="bottom: -15px; position: relative; margin-left: 10px;">
+          <h6 style="margin-bottom: 2px;"><b>Annette Black</b></h6>
+          <p style="width:300px;">Strategic Advisor at Company LLC</p>
+        </span>
+      </div>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="d-block w-50" style="left: 30px;position: relative;bottom: -110px;">
+        <p style="font-size: 1.2em; width: 4000px; position: relative; bottom: 40px;">
+          Mi semper risus ultricies orci pulvinar in at enim orci. Quis<br>facilisis nunc pellentesque in ullamcorper sit. Lorem blandit arcu <br>sapien, senectus libero, amet dapibus cursus quam. Eget <br>pellentesque eu purus volutpat adipiscing malesuada.</p>
+          <div style="display: flex;">
+        <img src="https://silicon.createx.studio/assets/img/avatar/15.jpg" style="border-radius: 500px; height: 60px; width: 60px;">
+        <span style="bottom: -15px; position: relative; margin-left: 10px;">
+          <h6 style="margin-bottom: 2px;"><b>Ralph Edwards</b></h6>
+          <p style="width:300px;">Head of marketing at lorem LTD</p>
+        </span>
+      </div>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="d-block w-50" style="left: 30px;position: relative;bottom: -110px;">
+        <p style="font-size: 1.2em; width: 4000px; position: relative; bottom: 40px;">
+          Mi semper risus ultricies orci pulvinar in at enim orci. Quis<br>facilisis nunc pellentesque in ullamcorper sit. Lorem blandit arcu <br>sapien, senectus libero, amet dapibus cursus quam. Eget <br>pellentesque eu purus volutpat adipiscing malesuada.</p>
+          <div style="display: flex;">
+        <img src="https://silicon.createx.studio/assets/img/avatar/16.jpg" style="border-radius: 500px; height: 60px; width: 60px;">
+        <span style="bottom: -15px; position: relative; margin-left: 10px;">
+          <h6 style="margin-bottom: 2px;"><b>Darrell Stewards</b></h6>
+          <p style="width:300px;">Project Manager at Ipsum LTD</p>
+        </span>
+      </div>
+      </div>
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true" style="position: relative; left:460px; top: -150px; background-color: black; border-radius: 50px;"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true" style="position: relative; left:0px; top: -150px; background-color: black; border-radius: 50px;"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+<!------------------------------------------CAROUSEL STOPS HERE------------------------------->
+</div>
+<!-----------------------------------------BLACK BOX AND CAROUSEL STOPS HERE------------------------------>
+<div style="margin-top: 100px;">
+<h1 style="text-align: center; font-size: 2.5em;margin-bottom: 29px;"><b>Integrate Top Work Tools</b></h1>
+<p style="text-align: center; font-size: large; color: gray;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin volutpat mollis egestas. Nam<br>luctus facilisis ultrices. Pellentesque volutpat ligula est. Mattis fermentum, at nec lacus.</p>
+</div>
+
+<div style="display: flex; justify-content: center;">
+  <a href="#" class="box_social_link">
+    <div style="background-color: white; width: 130px; height: 140px; border-radius: 5px; box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);">
+      <img src="https://silicon.createx.studio/assets/img/brands/google.svg" style="margin-top: 35px; margin-left: 25px; height: 70px;">
+    </div>
+  </a>
+  <a href="#" class="box_social_link">
+    <div style="background-color: white; width: 130px; height: 140px; border-radius: 5px; box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);">
+      <img src="https://silicon.createx.studio/assets/img/brands/zoom.svg" style="margin-top: 35px; margin-left: 25px; height: 70px;">
+    </div>
+  </a>
+  <a href="#" class="box_social_link">
+    <div style="background-color: white; width: 130px; height: 140px; border-radius: 5px; box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);">
+      <img src="https://silicon.createx.studio/assets/img/brands/slack.svg" style="margin-top: 35px; margin-left: 25px; height: 70px;">
+    </div>
+  </a>
+  <a href="#" class="box_social_link">
+    <div style="background-color: white; width: 130px; height: 140px; border-radius: 5px; box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);">
+      <img src="https://silicon.createx.studio/assets/img/brands/gmail.svg" style="margin-top: 35px; margin-left: 25px; height: 70px;">
+    </div>
+  </a>
+  <a href="#" class="box_social_link">
+    <div style="background-color: white; width: 130px; height: 140px; border-radius: 5px; box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);">
+      <img src="https://silicon.createx.studio/assets/img/brands/trello.svg" style="margin-top: 35px; margin-left: 25px; height: 70px;">
+    </div>
+  </a>
+  <a href="#" class="box_social_link">
+    <div style="background-color: white; width: 130px; height: 140px; border-radius: 5px; box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);">
+      <img src="https://silicon.createx.studio/assets/img/brands/mailchimp.svg" style="margin-top: 35px; margin-left: 25px; height: 70px;">
+    </div>
+  </a>
+  <a href="#" class="box_social_link">
+    <div style="background-color: white; width: 130px; height: 140px; border-radius: 5px; box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);">
+      <img src="https://silicon.createx.studio/assets/img/brands/dropbox.svg" style="margin-top: 35px; margin-left: 25px; height: 70px;">
+    </div>
+  </a>
+  <a href="#" class="box_social_link">
+    <div style="background-color: white; width: 130px; height: 140px; border-radius: 5px; box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);">
+      <img src="https://silicon.createx.studio/assets/img/brands/evernote.svg" style="margin-top: 35px; margin-left: 25px; height: 70px;">
+    </div>
+  </a>
+</div>
+<button type="button" class="btn btn-primary" style=" position: relative; right: -550px; width: 200px;height: 40px; margin-top: 70px;">View integrations</button>
+<div class="texta" style="background-color: black; width: 90%; border: 2px solid white; right: -70px; position: relative; height: 300px;margin-top: 100px; border-radius: 10px;">
+<div class="texta" style="text-align: center; top: 30px; position: relative;">
+  <h1 class="texting" style="color: white; margin-bottom: 30px;">Ready to Get Started?</h1>
+  <p class="texting" style="color: white; margin-bottom: 40px;">Organize your tasks with a 14-day free trial</p>
+  <form style="display: flex; margin-left: 300px; margin-bottom: 20px;">
+    <div style="background-color: white; height: 40px; width: 40px; border-top-left-radius: 5px; border-bottom-left-radius: 5px;">
+  <label for="email" namem="ye"><i class="fa fa-envelope" style="color: gray; margin-top: 13px; margin-left: 10px;"></i></label>
+</div>
+  <input type="text" placeholder="Your Email" style="border-radius: 0%;border: none; width: 350px;">
+  <button type="submit" class="btn btn-primary" style="border-radius: 0%; width: 150px; border-top-right-radius: 5px; border-bottom-right-radius: 5px;">Submit</button>
+</form>
+<p class="texting" style="color: white;">No subscriptions. No annual fees. No lock-ins.</p>
+</div>
+</div>
+
+
+
+
+<div style="display: flex; margin-top: 50px;">
+<div style="margin-left: 50px;">
+<div style="display: flex; margin-top: 40px;">
+  <img src="https://silicon.createx.studio/assets/img/logo.svg" style="height: 50px; margin-right: 9px;">
+  <p style="margin-top: 10px;"><a><strong style="font-size: 1.5em; font-family: Arial, Helvetica, sans-serif; margin-top: 105px;margin-right: 50px;">Silicon</strong></a></p>
+</div>
+<p>Proin ipsum pharetra, senectus eget scelerisque varius<br> pretium platea velit. Lacus, eget eu vitae nullam proin<br> turpis etiam mi sit. Non feugiat feugiat egestas nulla nec.<br> Arcu tempus, eget elementum dolor ullamcorper sodales<br> ultrices eros.</p>
+<h6>Subscribe to our newsletter</h6>
+<form style="display: flex; margin-bottom: 20px;">
+  <div style="background-color: white; height: 40px; width: 40px; border-top-left-radius: 5px; border-bottom-left-radius: 5px; border: 2px solid black; border-right: none; ">
+<label for="email" namem="ye"><i class="fa fa-envelope" style="color: gray; margin-top: 13px; margin-left: 10px;"></i></label>
+</div>
+<input type="text" placeholder="Your Email" style=" width: 200px;border: 2px solid black; border-left: none; border-right: none;">
+<button type="submit" class="btn btn-primary" style="border-radius: 0%; width: 150px; border-top-right-radius: 5px; border-bottom-right-radius: 5px;border: 2px solid black; border-left: none;">Submit</button>
+</form>
+<p><small>© All rights reserved. Made by Createx Studio</small></p>
+</div>
+
+<div>
+  <ol style="display: flex;list-style: none; margin-left: 120px; bottom: -50px; position: relative; margin-bottom: 100px;">
+    <div style="margin-right: 100px;">
+    <li><a href="#">Home</a></li><br>
+    <li><a href="#">Features</a></li><br>
+    <li><a href="#">Integrations</a></li><br>
+    <li><a href="#">Our Clients</a></li><br>
+    <li><a href="#">Blog</a></li><br>
+
+<div style="margin-top: 50px;">
+    <li><a href="#">Terms & Conditions</a></li><br>
+    <li><a href="#">Privacy Policy</a></li><br>
+</div>
+</div>
+<div style="margin-right: 120px;">
+    <li><a href="#">Twitter</a></li><br>
+    <li><a href="#">Facebook</a></li><br>
+    <li><a href="#">LinkedIn</a></li><br>
+    <li><a href="#">Instagram</a></li><br>
+</div>
+<div>
+    <li><strong>Contact Us</strong></li><br>
+    <li><a href="#" style="color: blue;text-decoration: underline;"><b>email@example.com</b></a></li><br>
+</div>
+</ol>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>  // -----------------------TOGGLE BTN STARTS HERE----------------------------
+    function toggleMode(btn) {
+  const body = document.body;
+  body.classList.toggle('light-mode');
+  body.classList.toggle('dark-mode');
+  btn.classList.toggle('active');
+}
+     // -----------------------TOGGLE BTN STOPS HERE----------------------------
+  </script>
+</body>
+</html>
